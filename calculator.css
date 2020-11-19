@@ -1,0 +1,139 @@
+body{
+    box-sizing: border-box;
+    background-image: linear-gradient(to right bottom, blue, red);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.calculator{
+    width: 27%;
+    height: auto;
+    background-color: #5C567A;
+    margin: auto;
+     border-bottom: 4px solid  rgba(253, 250, 250, 0.8); 
+    border-right: 4px solid  rgba(253, 250, 250, 0.8);
+    border-left: 4px solid rgba(253, 250, 250, 0.8);
+    box-shadow: 2px 3px 20px black;
+    border-radius: 20px 20px 15px 15px;
+    padding: 10px;
+    margin-top: 10px;
+
+ }
+  
+.tot{
+    height: 50px;
+     width:50px;
+      border-radius:50%;
+       border-width: 0;
+       font-size: 1em;
+    }
+.tot:active{
+    font-size: 0.9em;
+}
+.tot:focus{
+    outline: none;
+    border-width: 0;
+}
+
+.space{
+    width: 100%;
+    height: 50px;
+    background-color: #101318;
+    border-radius: 20px 20px 0 0;
+}
+.time{
+    float: right;
+    width: 40%;
+    margin-top: 10px;
+    margin-right: 8px;
+    outline: 0;
+    border-radius: 5px;
+    text-align: center;
+    background-color: darkolivegreen;
+    
+    
+}
+.clearfix {
+    clear: both;
+}
+
+#history{
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: none;
+    background-color: darkolivegreen;
+    color: black;
+    font-size: 1.2em;
+    font-family:  Verdana, sans-serif;
+}
+ #output {
+    width: 100%;
+    height: 40px;
+    text-align: right;
+    outline: none;
+    border: none;
+    background-color: darkolivegreen;
+    color: black;
+    font-size: 1.7em;
+    font-family: sans-serif;
+   
+
+
+
+}
+
+
+
+.hed{
+    width: 100%;
+    height: 100px;;
+    /* background-color: darkolivegreen; */
+    padding-bottom: 5px;
+    border: 10px solid rgba(253, 250, 250, 0.2);
+    border-style: inset;
+}
+.cont{
+    width: 100%;
+    padding-top: 20px;
+ } 
+.opr {
+    width: 35px;
+    height: 25;
+    font-size: x-small;
+    background-color: black;
+    border-radius: 2px;
+    color: #fff;
+    border-radius: 5px;
+    border-width: 0px; 
+}
+.opr:focus{
+    outline: none;
+}
+
+.opr:active{
+    font-size: 0.3em;    
+}
+
+.number, .operator{
+     width: 34px;
+    height:34px; 
+    outline: none;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: black;
+    color: #fff;   
+    border-width: 0px; 
+   
+}
+
+.number:focus, .operator:focus{
+    outline: none;
+}
+.number:active, .operator:active{
+   font-size: 0.5em;
+}
+.number:nth-last-child(2){
+    background-color: red;
+}

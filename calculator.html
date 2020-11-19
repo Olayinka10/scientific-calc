@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bootstrap4\dist\css\bootstrap.min.css">
+    <link rel="stylesheet" href="calculator.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container all">
+        <div class="calculator">
+            <div class="space">
+              <span class="h4 text-white text-muted pl-2">Casio</span>
+                 <input type=""  class="time" id="time" value="10:00" style="color: black; font-family: 'Century Gothic';" disabled> <br>
+                 <small><i class="pl-2 text-muted "> Powered by Olayinka</i></small>
+                <div class="clearfix"></div>
+            </div>
+              <div class="hed">
+                    <input type="text" id="history" disabled><br>
+                       <input type="text" id="output" disabled>
+                      </div>
+                   <div id="keyboard">
+               <small class="">
+                       <div class="row mt-3 container-fluid to ">
+                           <div class="col-2"><button class="opr" onclick="math('shift')">Shift</button></div>
+                           <div class="col-2"><button class="opr" onclick="math('alpha')">Alpha</button></div>
+                           <div class="col-3 ml-2 " ><button class="tot"  onclick="math('dis')" >Display</button></div>
+                           <div class="col-2"><button class="opr" onclick="math('mode')">mode</button></div>
+                           <div class="col-2"><button class="opr" onclick="on('on')">on</button></div>
+                       </div>
+                         <div class="row to2 ml-1">
+                                <div class="col-2"><button class="opr" onclick="math('x**-1')">x<sup>-1</sup></button></div>
+                                <div class="col-2"><button class="opr" onclick="math('nCr')">nCr</button></div>
+                                <div class="col-2" ></div>
+                                <div class="col-2"><button class="opr" onclick="math('pol')">pol(</button></div>
+                                <div class="col-2"><button class="opr" onclick="math('x**3')">x<sup>3</sup></button></div> 
+                         </div>
+                         <div class="row mt-3 container-fluid">
+                                <div class="col-2"><button class="opr" onclick="math('ab/c')">ab/c</button></div>
+                                <div class="col-2"><button class="opr" onclick="math('&#8730;')">&#8730;</button></div>
+                                <div class="col-2"><button class="opr" onclick="math('x**2')">x<sup>2</sup></button></div>
+                                <div class="col-2"><button class="opr" onclick="math('^')">^</button></div>                                 
+                                <div class="col-2"><button class="opr" onclick="math('log')">log</button></div>
+                                <div class="col-2"><button class="opr" onclick="math('In')">In</button></div> 
+                         </div>
+                         <div class="row mt-3 container">
+                                <div class="col-2"><button class="opr" onclick="math('(-)')">(-)</button></div>
+                                <div class="col-2"><button class="opr" onclick="math('.,,')">.,,,</button></div>
+                                <div class="col-2"><button class="opr" onclick="math('hyp')">hyp</button></div>
+                                <div class="col-2"><button class="opr" onclick="math('sin')">sin</button></div>                                 
+                                <div class="col-2"><button class="opr" onclick="math('cos')">cos</button></div>
+                                <div class="col-2"><button class="opr" onclick="math('tan')">tan</button></div> 
+                         </div>
+                                <div class="row mt-3 container">
+                                        <div class="col-2"><button class="opr" onclick="math('RCL')">RCL</button></div>
+                                        <div class="col-2"><button class="opr" onclick="math('ENG')">ENG</button></div>
+                                        <div class="col-2"><button class="opr" onclick="math('(')">(</button></div>
+                                        <div class="col-2"><button class="opr" onclick="math(')')">)</button></div>                                 
+                                        <div class="col-2"><button class="opr" onclick="math(',')">,</button></div>
+                                        <div class="col-2"><button class="opr" onclick="math('M+')">M+</button></div> 
+                                 </div>
+                        </small>
+                         <div class="cont ml-1">
+                         <div class="row mt-2  ">
+                                <div class="col-2 ml-1"><button class="number" onclick="math('7')">7</button></div>
+                                <div class="col-2 ml-1"><button class="number" onclick="math('8')">8</button></div>
+                                <div class="col-2 ml-1"><button class="number" onclick="math('9')">9</button></div>
+                                <div class="col-2 ml-1"><button class="operator bg-danger" onclick="dele('del')" id="dele"><small>DEL</small></button></div>                                 
+                                <div class="col-2 ml-1"><button class="operator bg-danger" onclick="ac('AC')"><small>AC</small></button></div>
+                         </div>
+                         <div class="row mt-2  ">
+                                <div class="col-2 ml-1"><button class="number" onclick="math('4')">4</button></div>
+                                <div class="col-2 ml-1"><button class="number" onclick="math('5')">5</button></div>
+                                <div class="col-2 ml-1"><button class="number" onclick="math('6')">6</button></div>
+                                <div class="col-2 ml-1"><button class="operator" onclick="math('*')">*</button></div>                                 
+                                <div class="col-2 ml-1"><button class="operator" onclick="math('/')">/</button></div>
+                         </div>
+                         <div class="row mt-2 ">
+                                <div class="col-2 ml-1"><button class="number" onclick="math('1')">1</button></div>
+                                <div class="col-2 ml-1"><button class="number" onclick="math('2')">2</button></div>
+                                <div class="col-2 ml-1"><button class="number" onclick="math('3')">3</button></div>
+                                <div class="col-2 ml-1"><button class="operator" onclick="math('+')">+</button></div>                                 
+                                <div class="col-2 ml-1"><button class="operator" onclick="math('-')">-</button></div>
+                         </div>
+                         <div class="row mt-2">
+                                <div class="col-2 ml-1"><button class="number" onclick="math('0')">0</button></div>
+                                <div class="col-2 ml-1"><button class="number" onclick="math()">.</button></div>
+                                <div class="col-2 ml-1"><button class="operator" onclick="math()"><small>EXP</small></button></div>
+                                <div class="col-2 ml-1"><button class="operator" onclick="math()"><small>Ans</small></button></div>                                 
+                                <div class="col-2 ml-1"><button class="operator" onclick="equall('=')">=</button></div>
+                         </div>
+                        </div>
+                    </div>
+              
+        </div>
+    </div>
+</body>
+<script src="calculator.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</html>
